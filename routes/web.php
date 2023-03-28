@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\clienteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,17 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente");
+Route::get('/cliente/create',"App\Http\Controllers\clienteController@create");
+Route::post('/clientecreado',"App\Http\Controllers\clienteController@store");
+
+//Route::get('/cliente','App\Http\Controllers\clienteController@show'); //para mostrarlos los registros
+
+//Route::get('/cliente',function(){
+  //  return "aqui se devolvera cliente";
+//});
+
+/*Route::get('/client', function () {
+    return view('client');
+});*/
