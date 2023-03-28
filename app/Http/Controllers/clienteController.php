@@ -22,7 +22,7 @@ class clienteController extends Controller
    
     public function store(Request $request)
     {
-       /* $validation= $request->validate([
+       $validation= $request->validate([
 
             'nombres' => 'required | min:3 | max: 30',
             'apellidos' => 'required | min:3 | max: 30',
@@ -38,8 +38,8 @@ class clienteController extends Controller
         $cliente->celular = $request->celular;
         $cliente->ci = $request->ci;
         
-        $cliente->save();*/
-        dd($request->all());
+        $cliente->save();
+    
         return 'Store';
     }
 
