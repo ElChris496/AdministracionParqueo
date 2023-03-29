@@ -20,6 +20,10 @@ class CreateGuardiaTable extends Migration
             $table->ipAddress('direccion');
             $table->integer('telefono');
             $table->ipAddress('correo_electronico');
+            $table->foreignId('id_parqueo')
+                  ->constrained('parqueo')
+                  ->cascadeOnUpdate()
+                  ->cascadeOnDelete();
             $table->timestamps();
         });
     }
