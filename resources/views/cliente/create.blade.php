@@ -1,5 +1,4 @@
-@extends('layout')
-@section ('content')
+
 <h1>Crear cliente</h1>
 <form action="/clientecreado" method="POST" role="form">
 {{csrf_field()}}
@@ -26,5 +25,3 @@
     <button type="submit"  class="btn btn-primary">Guardar</button>
 </form>
 
-
-@stop

@@ -46,31 +46,25 @@ class clienteController extends Controller
     
     public function show($id)
     {
-        $Cliente=Cliente::find($id);
-        return $Cliente;
+        $cliente=Cliente::find($id);
+        return $cliente;
     }
-
-
-   // public function edit($id)
-    //{
-        //
-    //}
 
   
     public function update(Request $request, $id)
     {
-        $Cliente = Cliente::findOrFail($request->id);
-        $Cliente->idCliente = $request->idCliente;
-        $Cliente->nombres = $request->nombres;
-        $Cliente->apellidos = $request->apellidos;
-        $Cliente->correo = $request->correo;
-        $Cliente->celular = $request->celular;
-        $Cliente->ci = $request->ci;
+        $cliente = Cliente::findOrFail($request->id);
+        $cliente->idCliente = $request->idCliente;
+        $cliente->nombres = $request->nombres;
+        $cliente->apellidos = $request->apellidos;
+        $cliente->correo = $request->correo;
+        $cliente->celular = $request->celular;
+        $cliente->ci = $request->ci;
 
 
-        $Cliente->save();
+        $cliente->save();
 
-        return $Cliente;
+        return "actualizado";
 
     }
  
