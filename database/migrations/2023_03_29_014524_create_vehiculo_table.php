@@ -19,11 +19,10 @@ class CreateVehiculoTable extends Migration
             $table->string('modelo');
             $table->integer('placa')->unique();
             $table->string('color');
-            $table->foreign("idCliente")
-                  ->references("id")
-                  ->on("cliente")
-                  ->onDelete("cascade")
-                  ->onUpdate("cascade");
+            $table->foreignId('id_cliente')
+                  ->constrained('cliente')
+                  ->cascadeOnUpdate()
+                  ->cascadeOnDelete();
             $table->timestamps();
         });
     }
