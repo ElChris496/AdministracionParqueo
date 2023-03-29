@@ -18,7 +18,7 @@ class CreateClienteTable extends Migration
             $table->string('nombres');
             $table->string('apellidos');
             $table->integer('ci')->unique();
-            $table->string('correo')->nullable();
+            $table->string('correo');
             $table->integer('celular');
             $table->timestamps();
         });
