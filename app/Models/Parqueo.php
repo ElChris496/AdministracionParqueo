@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Parqueo extends Model
 {
     use HasFactory;
+    protected $table="parqueo";
 }
