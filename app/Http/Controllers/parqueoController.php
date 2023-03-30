@@ -15,7 +15,7 @@ class parqueoController extends Controller
     
     public function create()
     {
-        return view('parqueo.create');
+        return view('horario.register');
     }
 
    
