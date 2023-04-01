@@ -23,11 +23,11 @@ class parqueoController extends Controller
     {
        $validation= $request->validate([
 
-            'cantidad_sitios' => 'required | integer',
-            'fecha_inicio' => 'required',
-            'fecha_fin' => 'required',
-            'hora_inicio' => 'required',
-            'hora_fin' => 'required',
+            'cantidad_sitios' => 'required | numeric',
+            'fecha_inicio' => 'required | date | date_format:Y/m/d',
+            'fecha_fin' => 'required | date | date_format:Y/m/d',
+            'hora_inicio' => 'required | time',
+            'hora_fin' => 'required | time ',
         ]);
 
         $parqueo=new Parqueo();
