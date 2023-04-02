@@ -7,7 +7,9 @@
     </head>
     <body>
         <div id="formulario">
+            <head>
                 <h1>Registrar Horario</h1>
+            </head>
             <form action="/parqueocreado" method="POST" role="form">    
             {{csrf_field()}}
             <div class= "form-goup">
