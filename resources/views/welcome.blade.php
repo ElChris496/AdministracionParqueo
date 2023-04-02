@@ -22,7 +22,7 @@
                         <li><a href="#">Features</a></li>
                         <li><a href="#">Precios</a></li>
                         <li><a href="#">Testimonials</a></li>
-                        <li><a href="#" class="btn">Sign up</a></li>
+                        <li><a href="inicio/login" class="btn">Sign up</a></li>
                     </ul>
                 </div>
                 <div>
