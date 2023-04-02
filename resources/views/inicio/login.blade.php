@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/AdministracionParqueo/resources/css/loginstyle.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost:8080/AdministracionParqueo/resources/css/logstyle.css">
     <title>Document</title>
+    <script type="text/javascript" src="http://localhost:8080/AdministracionParqueo/resources/js/login.js"></script>
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <form action="login.blade.php">
                 <img src="http://localhost:8080/AdministracionParqueo/resources/img/logo.png" alt="avatar" class="avatar">
                 <h2>welcome</h2>
-                <div class="input-div">
+                <div class="input-div one">
                     <div class="i">
                         <i class="fas fa-user"></i>
                     </div>
@@ -27,7 +28,7 @@
                     <input class="input" type="text">
                 </div>
                 </div>
-            <div class="input-div">
+            <div class="input-div two">
                 <div class="i">
                     <i class="fas fa-lock"></i>
                 </div>
@@ -41,7 +42,7 @@
                 </form>
             </div>
         </div>
-    </dic>
-    <script type="text/javascript" src="ruta del arquivo js"></script>
+    </div>
+    
 </body>
 </html>
