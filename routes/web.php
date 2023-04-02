@@ -30,7 +30,7 @@ Route::middleware([
 
 //frontend
 Route::get('/cliente/create',"App\Http\Controllers\clienteController@create");
-
+Route::get('/inicio/login',"App\Http\Controllers\loginController@create");
 
 //backend
 Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente"); //para tener todos los registros y mostrarlos
