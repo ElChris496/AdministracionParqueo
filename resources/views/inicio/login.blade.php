@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/AdministracionParqueo/resources/css/logstyle.css">
-    <title>Document</title>
-    <script type="text/javascript" src="http://localhost:8080/AdministracionParqueo/resources/js/login.js"></script>
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<title>Animated Login Form</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/AdministracionParqueo/resources/css/logstyle.css"">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="big-wrapper">
-        <div class="container">    
-            <div class="img">
-                <img src="http://localhost:8080/AdministracionParqueo/resources/img/auto.png" alt="">
-            </div>
-            <div class="login-container">
-                <form action="login.blade.php">
-                <img src="http://localhost:8080/AdministracionParqueo/resources/img/logo.png" alt="avatar" class="avatar">
-                <h2>welcome</h2>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-user"></i>
-                    </div>
-                <div>
-                    <h5>Username</h5>
-                    <input class="input" type="text">
-                </div>
-                </div>
-            <div class="input-div two">
-                <div class="i">
-                    <i class="fas fa-lock"></i>
-                </div>
-                <div>
-                    <h5>Password</h5>
-                    <input class="input" type="password">
-                </div>
-            </div>
-            <a href="#">Olvidaste tu Contrasena?</a>
-            <input type="submit" class="btn" value="Login">
-                </form>
-            </div>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+			<img src="http://localhost:8080/AdministracionParqueo/resources/img/auto.png">
+		</div>
+		<div class="login-content">
+			<form action="login.blade.php">
+				<img src="http://localhost:8080/AdministracionParqueo/resources/img/logo.png">
+				<h2 class="title">Welcome</h2>
+           		<div class="input-div one">
+           		   <div class="i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="div">
+           		   		<h5>Username</h5>
+           		   		<input type="text" class="input">
+           		   </div>
+           		</div>
+           		<div class="input-div pass">
+           		   <div class="i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="div">
+           		    	<h5>Password</h5>
+           		    	<input type="password" class="input">
+            	   </div>
+            	</div>
+            	<a href="#">Forgot Password?</a>
+            	<input type="submit" class="btn" value="Login">
+            </form>
         </div>
     </div>
-    
+    <script type="text/javascript" src="http://localhost:8080/AdministracionParqueo/resources/js/login.js""></script>
 </body>
 </html>
