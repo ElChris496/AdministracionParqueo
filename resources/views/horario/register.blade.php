@@ -1,14 +1,13 @@
+
 <html>
     <head>
         <meta charset=" utf-8" />
         <title>Registrar Horario</title>
-        <link rel="stylesheet"  type="text/css" href="{{ asset('css/horario.css')}}">
+        <link rel="stylesheet"  type="text/css" href="http://localhost:4644/AdministracionParqueo/resources/css/horario.css">
     </head>
     <body>
         <div id="formulario">
-            <head>
                 <h1>Registrar Horario</h1>
-            </head>
             <form action="/parqueocreado" method="POST" role="form">    
             {{csrf_field()}}
             <div class= "form-goup">
