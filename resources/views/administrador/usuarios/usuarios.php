@@ -1,6 +1,7 @@
 <?php include('../../../../config.php');?>
 <!DOCTYPE html>
 <html lang="es">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <head>
         <?php include('../../../layout/admin/head.php');?>
     </head>
@@ -30,13 +31,13 @@
                             <table class="table table-bordered">
                             <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Nombres</th>
-                                        <th>Apellidos</th>
-                                        <th>CI</th>
-                                        <th>Correo</th>
-                                        <th>Celular</th>
-                                        <th>Acciones</th>
+                                        <th class = text-center >#</th>
+                                        <th class = text-center >Nombres</th>
+                                        <th class = text-center >Apellidos</th>
+                                        <th class = text-center >CI</th>
+                                        <th class = text-center >Correo</th>
+                                        <th class = text-center >Celular</th>
+                                        <th class = text-center >Acciones</th>
                                     </tr>
                                 </thead>
                                 <?php
@@ -54,16 +55,15 @@
                                             $contador = $contador + 1;
                                 ?>
                                     <tr>
-                                        <td><?php echo $contador;?></td>
-                                        <td><?php echo $nombres;?></td>
-                                        <td><?php echo $apellidos;?></td>
-                                        <td><?php echo $ci;?></td>
-                                        <td><?php echo $correo;?></td>
-                                        <td><?php echo $celular;?></td>
-                                    <td>
-                                            <a href="#" class="view" title="View" data-toggle="tooltip"><i class="material-icons">&#xE417;</i></a>
-                                            <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                        <td class = text-center><?php echo $contador;?></td>
+                                        <td class = text-center><?php echo $nombres;?></td>
+                                        <td class = text-center><?php echo $apellidos;?></td>
+                                        <td class = text-center><?php echo $ci;?></td>
+                                        <td class = text-center><?php echo $correo;?></td>
+                                        <td class = text-center><?php echo $celular;?></td>
+                                    <td class = text-center>
+                                            <a href="edicionUsuarios.php?id=<?php echo $id; ?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">edit</i></a>
+                                            <a href="borrarUsuarios.php?id=<?php echo $id; ?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">delete</i></a>
                                         </td>
                                     </tr>
                                 <?php
