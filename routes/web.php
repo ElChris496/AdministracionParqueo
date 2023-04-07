@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clienteController;
-
+use App\Http\Controllers\reservaController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +30,7 @@ Route::middleware([
 
 //frontend
 Route::get('/cliente/create',"App\Http\Controllers\clienteController@create");
-
+Route::get('/reserva/create',"App\Http\Controllers\ocupaController@create");
 
 //backend
 Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente"); //para tener todos los registros y mostrarlos
@@ -38,6 +38,10 @@ Route::post('/clientecreado',"App\Http\Controllers\clienteController@store"); //
 Route::get('/cliente/{id}','App\Http\Controllers\clienteController@show'); //para mostrarlos los registros
 Route::put('/cliente/{id}','App\Http\Controllers\clienteController@update'); //actualizar un registro
 Route::delete('/cliente/{id}','App\Http\Controllers\clienteController@destroy'); //borrar un registro
+
+Route::get('/reserva',"App\Http\Controllers\ocupaController@obtenerreserva"); //para tener todos los registros y mostrarlos
+Route::post('/reservacreado',"App\Http\Controllers\ocupaController@store"); //crear un registro
+
 
 Route::get('/parqueo',"App\Http\Controllers\parqueoController@obtenerparqueo"); //para tener todos los registros y mostrarlos
 Route::post('/parqueocreado',"App\Http\Controllers\parqueoController@store"); //crear un registro
