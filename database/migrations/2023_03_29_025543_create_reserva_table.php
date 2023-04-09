@@ -28,7 +28,6 @@ class CreateReservaTable extends Migration
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
             $table->date('fecha_entrada');
-            $table->date('fecha_salida');
             $table->timestamps();
         });
     }
