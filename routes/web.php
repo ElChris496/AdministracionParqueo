@@ -41,6 +41,9 @@ Route::delete('/cliente/{id}','App\Http\Controllers\clienteController@destroy');
 
 Route::get('/reserva',"App\Http\Controllers\ocupaController@obtenerreserva"); //para tener todos los registros y mostrarlos
 Route::post('/reservacreado',"App\Http\Controllers\ocupaController@store"); //crear un registro
+Route::get('/reserva/{id}','App\Http\Controllers\ocupaController@show'); //para mostrarlos los registros
+Route::put('/reserva/{id}','App\Http\Controllers\ocupaController@update'); //actualizar un registro
+Route::delete('/reserva/{id}','App\Http\Controllers\ocupaController@destroy'); //borrar un registro
 
 
 Route::get('/parqueo',"App\Http\Controllers\parqueoController@obtenerparqueo"); //para tener todos los registros y mostrarlos

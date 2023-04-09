@@ -23,19 +23,23 @@ class ocupaController extends Controller
     {
        $validation= $request->validate([
 
-            'fecha_hora_solicitud'=> 'required ',
-            'fecha_hora_aprobacion' => 'required ',
-            'estado' => 'required',
-            'id_cliente' => 'required ',
-            'id_vehiculo' => 'required ',
+            'fecha_solicitud'=> 'date',
+            'hora_solicitud'=> 'time ',
+            'fecha_aprobacion' => 'date',
+            'hora_aprobacion' => 'time ',
+            'estado' => 'string',
+           
+            
         ]);
 
         $reserva=new Reserva();
-        $reserva->fecha_hora_solicitud = $request->fecha_hora_solicitud;
-        $reserva->fecha_hora_aprobacion = $request->fecha_hora_aprobacion;
+        $reserva->fecha_solicitud = $request->fecha_solicitud;
+        $reserva->hora_solicitud = $request->hora_solicitud ;
+        $reserva->fecha_aprobacion = $request->fecha_aprobacion;
+        $reserva->hora_aprobacion = $request->hora_aprobacion;
         $reserva->estado = $request->estado;
         $reserva->id_cliente = $request->id_cliente;
-        $reserva->id_vehiculo = $request->id_vehiculo;
+       
         
         
         $reserva->save();
@@ -47,5 +51,26 @@ class ocupaController extends Controller
         $reserva=Reserva::find($id);
         return $reserva;
     }
+    public function update(Request $request, $id)
+    {
+        $reserva = Reserva::findOrFail($request->id);
+        $reserva->fecha_solicitud = $request->fecha_solicitud;
+        $reserva->hora_solicitud = $request->hora_solicitud ;
+        $reserva->fecha_aprobacion = $request->fecha_aprobacion;
+        $reserva->hora_aprobacion = $request->hora_aprobacion;
+        $reserva->estado = $request->estado;
+        $reserva->id_cliente = $request->id_cliente;
 
+        $reserva->save();
+
+        return "actualizado";
+
+    }
+    public function destroy($id)
+    {
+        $Reserva = Reserva::destroy($id);
+
+        return $Reserva;
+    }
+ 
 }
