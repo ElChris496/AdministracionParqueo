@@ -15,9 +15,6 @@ class CreateReservaTable extends Migration
     {
         Schema::create('reserva', function (Blueprint $table) {
             $table->id();
-            $table->string('fecha_hora_solicitud');
-            $table->string('fecha_hora_aprobacion');
-            $table->string('estado');
             $table->foreignId('id_cliente')
                   ->constrained('cliente')
                   ->cascadeOnUpdate()
@@ -26,6 +23,12 @@ class CreateReservaTable extends Migration
                   ->constrained('vehiculo')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
+            $table->foreignId('id_sitio')
+                  ->constrained('sitio')
+                  ->cascadeOnUpdate()
+                  ->cascadeOnDelete();
+            $table->date('fecha_entrada');
+            $table->date('fecha_salida');
             $table->timestamps();
         });
     }
