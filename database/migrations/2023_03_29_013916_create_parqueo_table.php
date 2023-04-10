@@ -20,6 +20,7 @@ class CreateParqueoTable extends Migration
             $table->date('fecha_fin');
             $table->time('hora_inicio');
             $table->time('hora_fin');
+            $table->string('Mensaje');
             $table->timestamps();
         });
     }
