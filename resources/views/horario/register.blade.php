@@ -3,7 +3,7 @@
     <head>
         <meta charset=" utf-8" />
         <title>Registrar Horario</title>
-        <link rel="stylesheet"  type="text/css" href="https://github.com/ElChris496/AdministracionParqueo/resources/css/horario.css">
+        <link rel="stylesheet"  type="text/css" href="https://github.com/ElChris496/AdministracionParqueo/blob/master/resources/css/horario.css">
     </head>
     <body>
         <div id="formulario">
