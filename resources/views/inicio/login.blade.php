@@ -2,20 +2,20 @@
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="http://localhost:8080/AdministracionParqueo/resources/css/loginstyle.css"">
+	<link rel="stylesheet" type="text/css" href="https://administracionparqueo-production.up.railway.app/AdministracionParqueo/resources/css/loginstyle.css"">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<img class="fondo" src="http://localhost:8080/AdministracionParqueo/resources/img/autofondo.png">
+	<img class="fondo" src="https://administracionparqueo-production.up.railway.app/AdministracionParqueo/resources/img/autofondo.png">
 	<div class="container">
 		<div class="img">
 			<img src="http://localhost:8080/AdministracionParqueo/resources/img/mujerauto.svg">
 		</div>
 		<div class="login-content">
 			<form action="aqui va la funcion de donde botara cuando aprete login">
-				<img src="http://localhost:8080/AdministracionParqueo/resources/img/avatar.svg">
+				<img src="https://administracionparqueo-production.up.railway.app/AdministracionParqueo/resources/img/avatar.svg">
 				<h2 class="title">Bienvenido</h2>
            		<div class="input-div one">
            		   <div class="i">
