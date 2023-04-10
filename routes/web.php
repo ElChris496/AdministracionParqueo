@@ -30,7 +30,11 @@ Route::middleware([
 
 //frontend
 Route::get('/cliente/create',"App\Http\Controllers\clienteController@create");
+<<<<<<< HEAD
 Route::get('/reserva/create',"App\Http\Controllers\ocupaController@create");
+=======
+Route::get('/horario/registro',"App\Http\Controllers\parqueoController@create");
+>>>>>>> Horarios
 
 //backend
 Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente"); //para tener todos los registros y mostrarlos

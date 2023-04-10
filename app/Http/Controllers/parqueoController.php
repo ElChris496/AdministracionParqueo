@@ -15,7 +15,7 @@ class parqueoController extends Controller
     
     public function create()
     {
-        return view('parqueo.create');
+        return view('horario.register');
     }
 
    
@@ -23,9 +23,15 @@ class parqueoController extends Controller
     {
        $validation= $request->validate([
 
-            'cantidad_sitios' => 'required | integer',
-            'fecha_inicio' => 'required',
-            'fecha_fin' => 'required',
+            //'cantidad_sitios' => 'required | numeric',
+            //'fecha_inicio' => 'required | date_format:Y/m/d',
+            //'fecha_fin' => 'required |  date_format:Y/m/d',
+            //'hora_inicio' => 'required |  date_format: H:i:s',
+            //'hora_fin' => 'required  | date_format: H:i:s',
+
+            'cantidad_sitios' => 'required | numeric',
+            'fecha_inicio' => 'required' ,
+            'fecha_fin' => 'required' ,
             'hora_inicio' => 'required',
             'hora_fin' => 'required',
         ]);
