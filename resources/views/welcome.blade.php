@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema-Parqueo</title>
-    <link href="{{ secure_asset('resources\css\menustyle.css') }}" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://administracionparqueo-production.up.railway.app/resources\css\menustyle.css" media="all" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
                 <div class="container">
                     <div class="logo">
                     <img src="/resources/img/logo.png" alt="logo">
-                    <h3>Parqueo</h3>
+                    <h3>Radiadores SpRint</h3>
                     </div>
                 <div class="links">
                     <ul>
