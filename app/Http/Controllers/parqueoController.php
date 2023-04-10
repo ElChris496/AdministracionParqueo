@@ -34,6 +34,7 @@ class parqueoController extends Controller
             'fecha_fin' => 'required' ,
             'hora_inicio' => 'required',
             'hora_fin' => 'required',
+            'Mensaje'=> '',
         ]);
 
         $parqueo=new Parqueo();
