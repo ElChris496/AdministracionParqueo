@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema-Parqueo</title>
-    <link href="https://administracionparqueo-production.up.railway.app/resources\css\menustyle.css" media="all" rel="stylesheet" type="text/css">
+    <link href="/resources\css\menustyle.css" media="all" rel="stylesheet" type="text/css">
 </head>
 
 <body>
