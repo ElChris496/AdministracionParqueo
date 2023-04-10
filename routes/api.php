@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clienteController;
+use App\Http\Controllers\loginController;
 use App\Http\Controllers\parqueoController;
 /*
 |--------------------------------------------------------------------------
