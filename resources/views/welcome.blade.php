@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistema-Parqueo</title>
-    <link rel="stylesheet" type="text/css" href="http://localhost:8080/AdministracionParqueo/resources/css/menustyle.css">
+    <link rel="stylesheet" type="text/css" href=/resources/css/menustyle.css">
 </head>
 
 <body>
@@ -14,7 +14,7 @@
             <header>
                 <div class="container">
                     <div class="logo">
-                    <img src="http://localhost:8080/AdministracionParqueo/resources/img/logo.png" alt="logo">
+                    <img src="/resources/img/logo.png" alt="logo">
                     <h3>Parqueo</h3>
                     </div>
                 <div class="links">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="rigth">
-                    <img src="http://localhost:8080/AdministracionParqueo/resources/img/auto.png" alt="car img"class="car">
+                    <img src="/resources/img/auto.png" alt="car img"class="car">
                 </div>
                 </div>
             </div>
