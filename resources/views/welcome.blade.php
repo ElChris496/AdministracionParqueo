@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="rigth">
-                    <img src="/resources/img/auto.png" alt="car img"class="car">
+                    <img src="https://github.com/ElChris496/AdministracionParqueo/blob/master/resources/img/auto.png" alt="car img"class="car">
                 </div>
                 </div>
             </div>
