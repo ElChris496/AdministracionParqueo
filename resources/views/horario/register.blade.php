@@ -3,7 +3,7 @@
     <head>
         <meta charset=" utf-8" />
         <title>Registrar Horario</title>
-        <link rel="stylesheet"  type="text/css" href="..\css\horario.css">
+        <link rel="stylesheet"  type="text/css" href="https://administracionparqueo-production.up.railway.app/resources/css/horario.css">
     </head>
     <body>
         <div id="formulario">
