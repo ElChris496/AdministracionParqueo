@@ -15,7 +15,7 @@
                 <div class="container">
                     <div class="logo">
                     <img src="/resources/img/logo.png" alt="logo">
-                    <h3>Radiadores SprintS</h3>
+                    <h3>Radiadores SSprintS</h3>
                     </div>
                 <div class="links">
                     <ul>
