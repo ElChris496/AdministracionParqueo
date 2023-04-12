@@ -14,7 +14,7 @@
             <header>
                 <div class="container">
                     <div class="logo">
-                    <img src="/resources/img/logo.png" alt="logo">
+                    <img src="{{ asset('/img/logo.png') }}" alt="logo">
                     <h3>Radiadores SSprintS</h3>
                     </div>
                 <div class="links">
@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="rigth">
-                    <img src="https://github.com/ElChris496/AdministracionParqueo/blob/master/resources/img/auto.png" alt="car img"class="car">
+                    <img src="{{ asset('/img/auto.png') }}" alt="car img"class="car">
                 </div>
                 </div>
             </div>
