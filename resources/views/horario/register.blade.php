@@ -3,7 +3,7 @@
     <head>
         <meta charset=" utf-8" />
         <title>Registrar Horario</title>
-        <link rel="stylesheet"  type="text/css" href="resources/css/horario.css">
+        <link rel="stylesheet"  type="text/css" href="{{ asset('/css/menustyle.css') }}">
     </head>
     <body>
         <div id="formulario">
