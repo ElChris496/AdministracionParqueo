@@ -7,12 +7,12 @@ body{
 
 #formulario{
     position: absolute;
-    width: 807px;
-    height: 545px;
-    left: 418px;
-    top: 161px;
+    width: 80%;
+    height: 54%;
+    left: 41%;
+    top: 16%;
     background: #fafafa;
-    border-radius: 10px;
+    border-radius: 10%;
 }
 
 .formulario h1{
