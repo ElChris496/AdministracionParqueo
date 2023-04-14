@@ -7,13 +7,29 @@ body{
     background-color: #d9d9d9;
     font-family:"Poppins", sans-serif ;
 }
+.auton{
+    position: absolute;
+    width: 60%;
+    height: 55%;
+    margin: auto;
+    top: 45%;
+    left: 40%;
+}
+.parqueo{
+    position: absolute;
+    width: 25%;
+    margin: auto;
+    top: 20%;
+    left: 60%;
+    
+}
 .borde-formulario{
     margin: auto;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 30%;
     position:absolute;
     width: 60%;
-    height: 60%;
+    height: 50%;
     background-color: #324855;
     border-radius: 10px;
 }
@@ -21,7 +37,7 @@ body{
     margin: auto;
     margin-top: 3%;
     width: 98%;
-    height: 93%;
+    height: 90%;
     left: 41%;
     background: #fafafa;
     border-radius: 10px;
@@ -31,35 +47,83 @@ body{
 position: absolute;
 width: 50%;
 height: 50%;
-left: 325px;
-top: 75px;
+left: 25%;
+top: 10%;
 font-family: 'Poppins';
 font-style: normal;
-font-size: 20px;
+font-size: 15px;
 line-height: 45px;
 color: #324855;
 }
+
 .botong{
 cursor: pointer;
 box-sizing: border-box;
 position: absolute;
-width: 10%;
-height: 5%;
-left: 20px;
-top: 360px;
+width: 12%;
+height: 6%;
+left: 2%;
+top: 87%;
 background: #324855;
 border: 1px solid #000000;
 border-radius: 8px;
 color: #FDF7F7;
 }
+.botonc{
+cursor: pointer;
+box-sizing: border-box;
+position: absolute;
+width: 12%;
+height: 6%;
+left: 15%;
+top: 87%;
+background: #324855;
+border: 1px solid #000000;
+border-radius: 8px;
+color: #FDF7F7;
+}
+.fechai{
+    margin: auto;
+    margin-left: 2%;
 
+}
+.fechac{
+    margin: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.horaa{
+    margin: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.horac{
+    margin: auto;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+.cfechai{
+    margin: auto;
+    margin-left: 10%;
+}
+.cfechac{
+    margin: auto;
+    margin-left: 9.8%;
+}
+.choraa{
+    margin: auto;
+    margin-left: 5%;
+}
+.chorac{
+    margin: auto;
+    margin-left: 8%;
+}
 .titulob{
     position: absolute;
     width: 500px;
     height: 30px;
-    left: 10px;
-    top: -8px;
-    bottom: 10px;
+    left: 2%;
+    bottom: 94%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
@@ -79,29 +143,36 @@ height: 100%;
 left: -5px;
 top: 0px;
 background: #2A4858;
+
 }
 .opciones ul{
     width: 75%;
-    background: #eef104;
+    background: #F9FA85;
     list-style: none;
-    margin: 20px 30px;
+    margin: 50% 35px;
+    border-radius: 15px;
 }
 .opciones ul li{
-   border-bottom: 1px solid rgba(255, 255, 255, 1); 
+   border-bottom: 5px solid #2A4858; 
+   border-radius: 5px;
 }
 .opciones ul li a{
     color: #020202;
     text-decoration: none;
-    padding: 18px;
+    padding: 10px;
     font-size: 15px;
     display: block;
+    border-radius: 10px;
+    text-align: left;
+    margin-left: 10%;
 }
 .opciones ul li a:hover{
-    background: #1a970f;
+    background: #9AD287;
+    border-radius: 10px;
 }
 .opciones ul .subhorario{
     margin: 0%;
-    background:#2A4858;
+    background:#395261;
     width: 100%;
     display: none;
 }
@@ -109,13 +180,19 @@ background: #2A4858;
 .opciones ul .subhorario li a{
     font-size: 13px;
     padding-left: 10%;
+ 
+}
+/*js*/
+.opciones ul .activo{
+    display: block;
 }
 
-.opciones ul .activo{
-    display: none;
-}
+
 header{
     width: 1100px;
     color: #1231;
     margin: 300px;
+}
+@media  (min-width: 720px) and (max-width: 1080px){
+    
 }

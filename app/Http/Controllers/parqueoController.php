@@ -29,7 +29,7 @@ class parqueoController extends Controller
             //'hora_inicio' => 'required |  date_format: H:i:s',
             //'hora_fin' => 'required  | date_format: H:i:s',
 
-            'cantidad_sitios' => 'required | numeric',
+            //'cantidad_sitios' => 'required | numeric',
             'fecha_inicio' => 'required' ,
             'fecha_fin' => 'required' ,
             'hora_inicio' => 'required',
@@ -37,7 +37,7 @@ class parqueoController extends Controller
         ]);
 
         $parqueo=new Parqueo();
-        $parqueo->cantidad_sitios = $request->cantidad_sitios;
+        //$parqueo->cantidad_sitios = $request->cantidad_sitios;
         $parqueo->fecha_inicio = $request->fecha_inicio;
         $parqueo->fecha_fin = $request->fecha_fin;
         $parqueo->hora_inicio = $request->hora_inicio;
@@ -59,7 +59,7 @@ class parqueoController extends Controller
     public function update(Request $request, $id)
     {
         $parqueo = Parqueo::findOrFail($request->id);
-        $parqueo->cantidad_sitios = $request->cantidad_sitios;
+        //$parqueo->cantidad_sitios = $request->cantidad_sitios;
         $parqueo->fecha_inicio = $request->fecha_inicio;
         $parqueo->fecha_fin = $request->fecha_fin;
         $parqueo->hora_inicio = $request->hora_inicio;

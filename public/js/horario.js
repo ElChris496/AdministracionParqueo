@@ -1,9 +1,9 @@
-var menu = document.querySelectorAll('.horariob');
+var opciones = document.querySelectorAll('.horariob');
 
-menu.forEach(function(item){
+opciones.forEach(function(item){
     item.addEventListener('click', function(i){
         var elemento = i.target.parentNode; 
         console.log(elemento.children);
-        elemento.children[1].classlist.toggle('activo');
+        elemento.children[1].classList.toggle('activo');
     })
 })

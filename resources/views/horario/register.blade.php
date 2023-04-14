@@ -19,8 +19,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 <body class="registro">
 <div class="tituloc">
-      <h1>Registrar Horario</h1>
-      </div>
+    <h1>Registrar Horario</h1>
+  </div>
   <section class="borde-formulario">
       <div class=" titulob">
       <h2> Ingrese el horario </h2>
@@ -29,30 +29,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="formulario">
             <form action="/parqueocreado" method="POST" role="form">    
             {{csrf_field()}}
-            <div class= "form-goup">
-                <label for="">Espacios</label>
-                <input type="number" class="form-control" name="cantidad_sitios" placeholder="Ingrese la cantidad de sitios"></input>
+            <div class="fechai">
+                <label class = "lfechai" for="">Fecha de inicio</label>
+                <input type="date" class="cfechai" name="fecha_inicio" placeholder="Ingrese la fecha de inicio"></input>
             </div>
-            <div class="form-goup">
-                <label for="">Fecha de inicio</label>
-                <input type="date" class="form-control" name="fecha_inicio" placeholder="Ingrese la fecha de inicio"></input>
-            </div>
-            <div class= "form-goup">
+            <div class= "fechac">
                 <label for="">Fecha de cierre</label>
-                <input type="date" class="form-control" name="fecha_fin" placeholder="Ingrese la fecha de cierre"></input>
+                <input type="date" class="cfechac" name="fecha_fin" placeholder="Ingrese la fecha de cierre"></input>
             </div> 
-            <div class="form-goup">
+            <div class="horaa">
                 <label for="">Horario de Apertura</label>
-                <input type="time" class="form-control" name="hora_inicio" placeholder="Ingrese la hora de apertura de apertura"></input>
+                <input type="time" class="choraa" name="hora_inicio" placeholder="Ingrese la hora de apertura de apertura"></input>
             </div>
-            <div class="form-goup">
+            <div class="horac">
                 <label for="">Horario de Cierre</label>
-                <input type="time" class="form-control" name="hora_fin" placeholder="Ingrese la hora de cierre"></input>
+                <input type="time" class="chorac" name="hora_fin" placeholder="Ingrese la hora de cierre"></input>
             </div>
             <button type="submit"  class="botong">Guardar</button>
+            <button class="botonc">Cancelar</button>
             </form>
         </div>
+        <img class= "parqueo" src="{{ asset('/img/parqueo.png') }}" >
   </section>
+  
   <!-- nav -->
   <aside class="nav">
     <div class="opciones">
@@ -60,7 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li><a href= "#">Usuarios</a></li>
       <li><a href= "#">Sitios</a></li>
       <li><a href= "#">Mapeo de parqueo</a></li>
-      <li class="horariob"><a href= "#">Horario <span><i class= "icono fa-solid fa-chevron-down" aria-hidden="true"></i></span></a>
+      <li class="horariob"><a href= "#">Horario <span><i class="icono fa-regular fa-circle-chevron-down" aria-hidden="true"></i></span></a>
         <ul class="subhorario">
             <li><a href="#">Agregar Horario</a></li>
             <li><a href="#">Horario de Emergencia</a></li>
@@ -70,17 +69,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </ul>   
     </div>
   </aside>
+  
   <!-- Main Footer -->
   <footer class="abajof">
-    <!-- To the right -->
-    <div class="abajo">
-      Anything you want
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    
   </footer>
 </div>
-  <script src="{{ asset('/js/horario.js') }}"></script>
+<div class="auton">
+    <img class = "auton" src="{{ asset('/img/auton.png') }}" alt="">
+  </div>
+  <script type="text/javascript" src="{{ asset('/js/horario.js') }}"></script>
 </body>
 </html>
 
