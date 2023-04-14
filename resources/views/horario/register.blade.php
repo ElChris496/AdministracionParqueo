@@ -14,14 +14,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
+  <link rel="stylesheet"  type="text/css" href="{{ asset('/css/fontawesome.min.css') }}">
   <link rel="stylesheet"  type="text/css" href="{{ asset('/css/horario.css') }}">
 </head>
 <body class="registro">
-<div class="borde-formulario">
-    <h2> Ingrese el horario </h2>
-  <!-- Form -->
-<div class="formulario">
-                <h1>Registrar Horario</h1>
+<div class="tituloc">
+      <h1>Registrar Horario</h1>
+      </div>
+  <section class="borde-formulario">
+      <div class=" titulob">
+      <h2> Ingrese el horario </h2>
+      </div>
+      <!-- Form -->
+      <div class="formulario">
             <form action="/parqueocreado" method="POST" role="form">    
             {{csrf_field()}}
             <div class= "form-goup">
@@ -47,26 +52,35 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <button type="submit"  class="botong">Guardar</button>
             </form>
         </div>
+  </section>
+  <!-- nav -->
+  <aside class="nav">
+    <div class="opciones">
+    <ul>
+      <li><a href= "#">Usuarios</a></li>
+      <li><a href= "#">Sitios</a></li>
+      <li><a href= "#">Mapeo de parqueo</a></li>
+      <li class="horariob"><a href= "#">Horario <span><i class= "icono fa-solid fa-chevron-down" aria-hidden="true"></i></span></a>
+        <ul class="subhorario">
+            <li><a href="#">Agregar Horario</a></li>
+            <li><a href="#">Horario de Emergencia</a></li>
+        </ul>
+      </li>
+      <li><a href= "#">Reservar</a></li>
+    </ul>   
+    </div>
+  </aside>
   <!-- Main Footer -->
-  <footer class="main-footer">
+  <footer class="abajof">
     <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
+    <div class="abajo">
       Anything you want
     </div>
     <!-- Default to the left -->
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
 </div>
-<!-- ./wrapper -->
-
-<!-- REQUIRED SCRIPTS -->
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+  <script src="{{ asset('/js/horario.js') }}"></script>
 </body>
 </html>
 
