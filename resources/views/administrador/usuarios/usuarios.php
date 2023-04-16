@@ -19,13 +19,14 @@
                         <div class="table-wrapper">
                             <div class="table-title">
                                 <div class="row">
-                                    <div class="col-sm-8"><h2>Lista de <b>Usuarios</b></h2></div>
+                                    <div class="col-sm-8"><h2><b>Lista de Usuarios</b></h2></div>
+                                    <!--
                                     <div class="col-sm-4">
                                         <div class="search-box">
                                             <i class="nav-icon fas fa-search">&#xE8B6;</i>
                                             <input type="text" class="form-control" placeholder="Search&hellip;">
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                             <table class="table table-bordered">
@@ -70,6 +71,7 @@
                                     }
                                         ?>
                             </table>
+                            <img src="http://localhost/AdministracionParqueo/public/img/parqueo1.png">
                         </div>
                     </div>  
                 </div>
@@ -84,26 +86,31 @@
 <style>
 body {
     color: #566787;
-    background: #f5f5f5;
-    font-family: 'Roboto', sans-serif;
+    background-color:#D9D9D9;
+    font-family: 'Poppins', sans-serif;
+}
+h2{
+    font-family: 'Poppins', sans-serif;
+    color: #324855;
+}
+.content-wrapper{
+    background-color:#D9D9D9;
+    padding: 20px;
 }
 .table-responsive {
     margin: 30px 0;
 }
 .table-wrapper {
     min-width: 1000px;
-    background: #fff;
-    padding: 20px;
+    background: #ffff;
+    padding: 40px;
     box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border-radius: 10px;
 }
 .table-title {
     padding-bottom: 10px;
     margin: 0 0 10px;
     min-width: 100%;
-}
-.table-title h2 {
-    margin: 8px 0 0;
-    font-size: 22px;
 }
 .search-box {
     position: relative;        
@@ -131,5 +138,12 @@ table.table th i {
     margin: 0 5px;
     cursor: pointer;
 }   
+img {
+    width: 20%;
+    height:auto;
+    margin-top: 2%;
+    margin-left: 81%;
+    margin-bottom: -1%;
+}
 </style>
 </html>

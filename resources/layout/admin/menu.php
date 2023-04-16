@@ -29,7 +29,7 @@
    <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#324855">
     <!-- Brand Logo -->
     <a href="http://localhost/AdministracionParqueo/resources/views/administrador/ventanaPrincipalAdmin.php" class="brand-link"  style="margin-top: 5px; margin-bottom: 5px;" >
-      <img src="http://localhost/AdministracionParqueo/resources/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="http://localhost/AdministracionParqueo/public/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">Radiador Springs</span>
     </a>
 
