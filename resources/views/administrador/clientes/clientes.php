@@ -19,7 +19,7 @@
                         <div class="table-wrapper">
                             <div class="table-title">
                                 <div class="row">
-                                    <div class="col-sm-8"><h2><b>Lista de Usuarios</b></h2></div>
+                                    <div class="col-sm-8"><h2><b>Lista de Clientes</b></h2></div>
                                     <!--
                                     <div class="col-sm-4">
                                         <div class="search-box">
@@ -63,8 +63,8 @@
                                         <td class = text-center><?php echo $correo;?></td>
                                         <td class = text-center><?php echo $celular;?></td>
                                     <td class = text-center>
-                                            <a href="edicionUsuarios.php?id=<?php echo $id; ?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">edit</i></a>
-                                            <a href="borrarUsuarios.php?id=<?php echo $id; ?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">delete</i></a>
+                                            <a href="editarCliente.php?id=<?php echo $id; ?>" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">edit</i></a>
+                                            <a href="borrarCliente.php?id=<?php echo $id; ?>" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">delete</i></a>
                                         </td>
                                     </tr>
                                 <?php

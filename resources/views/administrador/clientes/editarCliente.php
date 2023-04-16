@@ -14,7 +14,7 @@
         <div class="container-xl">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-8"><h2><b>Editar Usuario</b></h2></div>
+                    <div class="col-sm-8"><h2><b>Editar Cliente</b></h2></div>
                 </div>
             </div>
 
@@ -40,7 +40,7 @@
 
                         <div class="card">
                             <div class="card-header">
-                                <h3 class="card-title">Edición del Usuario</h3>
+                                <h3 class="card-title">Edición del Cliente</h3>
                             </div>
                             <div class="card-body">
                                 <div class="form-group">
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-success" id="btn_editar" style="background-color:#53A790; border-color:#53A790;">Actualizar</button>
-                                    <a href="../../../../resources/views/administrador/usuarios/usuarios.php" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;" >Cancelar</a>
+                                    <a href="../../../../resources/views/administrador/clientes/clientes.php" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;" >Cancelar</a>
                                 </div>
                                 <img src="http://localhost/AdministracionParqueo/public/img/parqueo3.jpg">
                                 <div id="respuesta">

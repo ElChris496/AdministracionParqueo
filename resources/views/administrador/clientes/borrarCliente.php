@@ -14,7 +14,7 @@
             <div class="container-xl">
                 <div class="table-title">
                      <div class="row">
-                            <div class="col-sm-8"><h2><b>Eliminar Usuario</b></h2></div>
+                            <div class="col-sm-8"><h2><b>Eliminar Cliente</b></h2></div>
                      </div>
                 </div>
 
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="form-group">
                                         <button class="btn btn-danger" id="btn_borrar" style="background-color:#53A790; border-color:#53A790;" >Borrar</button>
-                                        <a href="../../../../resources/views/administrador/usuarios/usuarios.php" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
+                                        <a href="../../../../resources/views/administrador/clientes/clientes.php" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
                                     </div>
                                     <img src="http://localhost/AdministracionParqueo/public/img/parqueo3.jpg">
                                     <div id="respuesta">

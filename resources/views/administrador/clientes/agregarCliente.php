@@ -14,7 +14,7 @@
                 <div class="container-xl">
                 <div class="table-title">
                      <div class="row">
-                            <div class="col-sm-8"><h2><b>Agregar Usuario</b></h2></div>
+                            <div class="col-sm-8"><h2><b>Agregar Cliente</b></h2></div>
                      </div>
                 </div>
                     <div class="container-fluid">
@@ -23,7 +23,7 @@
 
                                 <div class="card">
                                     <div class="card-header">
-                                        <h4>Nuevo Usuario</h4>
+                                        <h4>Nuevo Cliente</h4>
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
@@ -48,7 +48,7 @@
                                         </div>
                                         <div class="form-group2">
                                             <button class="btn btn-primary" id="btn_guardar" style="background-color:#53A790; border-color:#53A790;">Guardar</button>
-                                            <a href="../../../../resources/views/administrador/usuarios/usuarios.php" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
+                                            <a href="../../../../resources/views/administrador/clientes/clientes.php" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
                                         </div>
                                         <img src="http://localhost/AdministracionParqueo/public/img/parqueo3.jpg">
                                         <div id="respuesta">

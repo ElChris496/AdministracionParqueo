@@ -27,7 +27,7 @@ $sentencia->bindParam('updated_at',$updated_at);
 if($sentencia->execute()){
     echo "registro satisfactorio";
     ?>
-    <script>location.href = "../usuarios/usuarios.php";</script>
+    <script>location.href = "../clientes/clientes.php";</script>
 <?php
 }else{
     echo "no se pudo registrar a la base de datos";
