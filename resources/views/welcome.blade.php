@@ -39,7 +39,7 @@
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum, voluptatum magnam delectus eaque, blanditiis vel possimus quibusdam dolorum rerum maiores eum quo reiciendis quae nostrum, cupiditate tenetur! Itaque, modi ab.
                     </p>
                     <div class="cta">
-                        <a href="#" class="btn">Empezar</a>
+                        <a href="http://localhost/AdministracionParqueo/resources/views/administrador/ventanaPrincipalAdmin.php" class="btn">Empezar</a>
                     </div>
                 </div>
                 <div class="rigth">
