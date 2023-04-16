@@ -112,13 +112,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                <a href="http://localhost/AdministracionParqueo/resources/views/horario/register.blade.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                   <i class="nav-icon fas fa-plus-circle"></i>
                   <p>Agregar Horario</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                <a href="http://localhost/AdministracionParqueo/resources/views/horario/emergecy.blade.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                   <i class="nav-icon fas fa-hard-hat"></i>
                   <p>Horario de emergencia</p>
                 </a>
