@@ -33,6 +33,7 @@ Route::get('/cliente/create',"App\Http\Controllers\clienteController@create");
 Route::get('/reserva/create',"App\Http\Controllers\ocupaController@create");
 Route::get('/horario/registro',"App\Http\Controllers\parqueoController@create");
 Route::get('/inicio/login',"App\Http\Controllers\loginController@create");
+Route::get('/administrador/clientes/agregarCliente',"App\Http\Controllers\agregarClienteController@create");
 
 //backend
 Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente"); //para tener todos los registros y mostrarlos
