@@ -1,15 +1,27 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registrar Horario</title>
 
-<html>
-    <head>
-        <meta charset=" utf-8" />
-        <title>Registrar Horario</title>
-        <link rel="stylesheet"  type="text/css" href="{{ asset('/css/menustyle.css') }}">
-    </head>
-    <body>
-        <div id="formulario">
-            <head>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet"  type="text/css" href="{{ asset('/css/horario.css') }}">
+</head>
+<body class="registro">
+<div class="borde-formulario">
+    <h2> Ingrese el horario </h2>
+  <!-- Form -->
+<div class="formulario">
                 <h1>Registrar Horario</h1>
-            </head>
             <form action="/parqueocreado" method="POST" role="form">    
             {{csrf_field()}}
             <div class= "form-goup">
@@ -32,8 +44,30 @@
                 <label for="">Horario de Cierre</label>
                 <input type="time" class="form-control" name="hora_fin" placeholder="Ingrese la hora de cierre"></input>
             </div>
-            <button type="submit"  class="btn btn-primary">Guardar</button>
+            <button type="submit"  class="botong">Guardar</button>
             </form>
         </div>
-    </body>
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+</body>
 </html>
+
+
