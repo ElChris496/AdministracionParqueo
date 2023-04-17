@@ -15,7 +15,7 @@
                 <div class="container">
                     <div class="logo">
                     <img src="http://localhost:8080/AdministracionParqueo/resources/img/logo.png" alt="logo">
-                    <h3>Parqueo</h3>
+                    <h3>Parquaaaeo</h3>
                     </div>
                 <div class="links">
                     <ul>
