@@ -38,7 +38,6 @@ Route::get('/administrador/clientes',"App\Http\Controllers\clientesController@cr
 Route::get('/administrador/agregarCliente',"App\Http\Controllers\clientesController@createAgregar");
 Route::get('/administrador/editarCliente/{id}',"App\Http\Controllers\clientesController@createEditar");
 Route::get('/administrador/borrarCliente/{id}',"App\Http\Controllers\clientesController@createborrar");
-Roure::get('/administrador/mapeoParqueo', "App\Http\Controllers\parqueoController@createMapeo");
 //b
 Route::post('/store',"App\Http\Controllers\clientesController@store");
 Route::put('/update/{id}',"App\Http\Controllers\clientesController@update");
