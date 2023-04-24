@@ -33,6 +33,17 @@ Route::get('/cliente/create',"App\Http\Controllers\clienteController@create");
 Route::get('/reserva/create',"App\Http\Controllers\ocupaController@create");
 Route::get('/horario/registro',"App\Http\Controllers\parqueoController@create");
 Route::get('/inicio/login',"App\Http\Controllers\loginController@create");
+Route::get('/administrador/home',"App\Http\Controllers\homeController@create");
+Route::get('/administrador/clientes',"App\Http\Controllers\clientesController@createLista");
+Route::get('/administrador/agregarCliente',"App\Http\Controllers\clientesController@createAgregar");
+Route::get('/administrador/editarCliente/{id}',"App\Http\Controllers\clientesController@createEditar");
+Route::get('/administrador/borrarCliente/{id}',"App\Http\Controllers\clientesController@createborrar");
+Roure::get('/administrador/mapeoParqueo', "App\Http\Controllers\parqueoController@createMapeo");
+//b
+Route::post('/store',"App\Http\Controllers\clientesController@store");
+Route::put('/update/{id}',"App\Http\Controllers\clientesController@update");
+Route::delete('/delete/{id}',"App\Http\Controllers\clientesController@delete");
+
 
 //backend
 Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente"); //para tener todos los registros y mostrarlos

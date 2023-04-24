@@ -4,7 +4,13 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet"  type="text/css" href="{{ asset('/css/horario.css') }}">
     <head>
-        <?php include('../../../layout/admin/head.php');?>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Radiador Springs</title>
+        <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css">
     </head>
     <body class="hold-transition sidebar-mini" style="background-color:#D9D9D9 ">
         <div class="wrapper">
