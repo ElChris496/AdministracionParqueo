@@ -181,32 +181,44 @@
                         <div class="table-wrapper">
                             <div class="table-title">
                                 <div class="row">
-                                    <div class="col-sm-8"><h2><b>Lista de Clientes</b></h2></div>
+                                    <div class="col-sm-8"><h2><b>Lista de Vehiculos</b></h2></div>
                                 </div>
                             </div>
                             <table class="table table-bordered">
                             <thead>
                                     <tr>
                                         <th class = text-center >#</th>
-                                        <th class = text-center >Nombres</th>
-                                        <th class = text-center >Apellidos</th>
-                                        <th class = text-center >CI</th>
-                                        <th class = text-center >Correo</th>
-                                        <th class = text-center >Celular</th>
-                                        <th class = text-center >Acciones</th>
+                                        <th class = text-center >CI Dueño</th>
+                                        <th class = text-center >Marca</th>
+                                        <th class = text-center >Modelo</th>
+                                        <th class = text-center >Placa</th>
+                                        <th class = text-center >Color</th>
                                     </tr>
                                 </thead>
-                                @foreach($lista as $cliente)
+                                @php 
+                                    $counter = 1;
+                                    $collection = collect($collection);
+                                    $numColl = $collection->shift();
+                                @endphp
+                                @foreach($listav as $vehiculo)
                                     <tr>
-                                        <td class = text-center>{{$cliente->id}}</td>
-                                        <td class = text-center>{{$cliente->nombres}}</td>
-                                        <td class = text-center>{{$cliente->apellidos}}</td>
-                                        <td class = text-center>{{$cliente->ci}}</td>
-                                        <td class = text-center>{{$cliente->correo}}</td>
-                                        <td class = text-center>{{$cliente->celular}}</td>
-                                    <td class = text-center>
-                                            <a href= "{{url ('/administrador/editarCliente', $cliente)}}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">edit</i></a>
-                                            <a href="{{url ('/administrador/borrarCliente', $cliente)}}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">delete</i></a>
+                                        <td class = text-center>{{$counter}}</td>
+                                        @php 
+                                            $counter=$counter +1; 
+                                            
+                                        @endphp
+                                        <td class = text-center>{{$numColl}}</td>
+                                        @php 
+                                            $collection = collect($collection); 
+                                            $numColl = $collection->shift();
+                                        @endphp
+                                        <td class = text-center>{{$vehiculo->marca}}</td>
+                                        <td class = text-center>{{$vehiculo->modelo}}</td>
+                                        <td class = text-center>{{$vehiculo->placa}}</td>
+                                        <td class = text-center>{{$vehiculo->color}}</td>
+                                        <td class = text-center>
+                                            <a href= "" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">edit</i></a>
+                                            <a href= "" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">delete</i></a>
                                     </td>
                                     </tr>
                                 @endforeach

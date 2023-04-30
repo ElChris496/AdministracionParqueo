@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\clienteController;
+use App\Http\Controllers\clientesController;
 use App\Http\Controllers\reservaController;
+use App\Http\Controllers\vehiculoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,11 +39,15 @@ Route::get('/administrador/clientes',"App\Http\Controllers\clientesController@cr
 Route::get('/administrador/agregarCliente',"App\Http\Controllers\clientesController@createAgregar");
 Route::get('/administrador/editarCliente/{id}',"App\Http\Controllers\clientesController@createEditar");
 Route::get('/administrador/borrarCliente/{id}',"App\Http\Controllers\clientesController@createborrar");
+
+Route::get('/administrador/vehiculos','App\Http\Controllers\vehiculoController@createLista');
+Route::get('/administrador/agregarVehiculo','App\Http\Controllers\vehiculoController@createAgregar');
 //b
 Route::post('/store',"App\Http\Controllers\clientesController@store");
 Route::put('/update/{id}',"App\Http\Controllers\clientesController@update");
 Route::delete('/delete/{id}',"App\Http\Controllers\clientesController@delete");
 
+Route::post('/storeVehiculo','App\Http\Controllers\vehiculoController@store');
 
 //backend
 Route::get('/cliente',"App\Http\Controllers\clienteController@obtenercliente"); //para tener todos los registros y mostrarlos

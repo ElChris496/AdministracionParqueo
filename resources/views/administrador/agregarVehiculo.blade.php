@@ -14,10 +14,9 @@
         <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js"> </script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
     </head>
-    <body class="hold-transition sidebar-mini">
+    <body class="hold-transition sidebar-mini" style="background-color:#D9D9D9 ">
         <div class="wrapper">
-
-        <!--MENU-INICIO-->
+            <!--MENU-INICIO-->
                 <!-- inicio-navbar -->
                 <nav class="main-header navbar navbar-expand navbar-white navbar-light">
                 <!-- Left navbar links -->
@@ -73,29 +72,6 @@
                             </li>
                             </ul>
                         </li>
-
-                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 5px;">
-                            <i class="nav-icon fas fa-car"></i>
-                            <p>Automoviles<i class="right fas fa-angle-left"></i></p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="/administrador/vehiculos" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
-                                <i class="nav-icon fas fa-car"></i>
-                                <p>Lista de automoviles</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="/administrador/agregarVehiculo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
-                                <i class="nav-icon fas fa-plus-circle"></i>
-                                <p>Agregar Automovil</p>
-                                </a>
-                            </li>
-                            </ul>
-                        </li>
-
 
                         <li class="nav-item">
                             <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 3px;">
@@ -172,123 +148,132 @@
                 <!--MENU-FIN-->
 
         <!-- Content Wrapper. Contains page content -->
-        <div class="content-wrapper">
-            <div class="container">
-                
-            <!--INICIO CRUD -->
+            <div class="content-wrapper" style="background-color:#D9D9D9; padding: 20px;">
                 <div class="container-xl">
-                    <div class="table-responsive">
-                        <div class="table-wrapper">
-                            <div class="table-title">
-                                <div class="row">
-                                    <div class="col-sm-8"><h2><b>Lista de Clientes</b></h2></div>
+                <div class="table-title">
+                     <div class="row">
+                            <div class="col-sm-8"><h2><b>Agregar Vehiculo</b></h2></div>
+                     </div>
+                </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Nuevo Vehiculo</h4>
+                                    </div>
+                                    <form action="/storeVehiculo" method="POST" role="form">
+                                    {{csrf_field()}}
+                                        <div class="card-body" >
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="">CI Dueño*</label>
+                                                <input type="text" class="form-control" name="ci" placeholder="Ingrese el CI del dueño del vehiculo"></input>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="">Marca*</label>
+                                                <input type="text" class="form-control" name="marca" placeholder="Ingrese la placa del vehiculo"></input>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-4">
+                                                <label for="">Modelo*</label>
+                                                <input type="text" class="form-control" name="modelo" placeholder="Ingrese el modelo del vehiculo"></input>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="">Placa*</label>
+                                                <input type="text" class="form-control" name="placa" placeholder="Ingrese la marca del vehiculo"></input>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="">Color*</label>
+                                                <input type="text" class="form-control" name="color" placeholder="Ingrese el color del vehiculo"></input>
+                                            </div>
+                                        </div>
+                                        <div class="form-group2">
+                                            <button  type="submit" class="btn btn-primary" id="btn_guardar" style="background-color:#53A790; border-color:#53A790;">Guardar</button>
+                                            <a href="/administrador/clientes" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
+                                        </div>
+                                        <img src="{{ asset('/img/parqueo3.jpg') }}">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <table class="table table-bordered">
-                            <thead>
-                                    <tr>
-                                        <th class = text-center >#</th>
-                                        <th class = text-center >Nombres</th>
-                                        <th class = text-center >Apellidos</th>
-                                        <th class = text-center >CI</th>
-                                        <th class = text-center >Correo</th>
-                                        <th class = text-center >Celular</th>
-                                        <th class = text-center >Acciones</th>
-                                    </tr>
-                                </thead>
-                                @foreach($lista as $cliente)
-                                    <tr>
-                                        <td class = text-center>{{$cliente->id}}</td>
-                                        <td class = text-center>{{$cliente->nombres}}</td>
-                                        <td class = text-center>{{$cliente->apellidos}}</td>
-                                        <td class = text-center>{{$cliente->ci}}</td>
-                                        <td class = text-center>{{$cliente->correo}}</td>
-                                        <td class = text-center>{{$cliente->celular}}</td>
-                                    <td class = text-center>
-                                            <a href= "{{url ('/administrador/editarCliente', $cliente)}}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">edit</i></a>
-                                            <a href="{{url ('/administrador/borrarCliente', $cliente)}}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons"style="color:#2A4858">delete</i></a>
-                                    </td>
-                                    </tr>
-                                @endforeach
-                            </table>
-                            <img src="{{ asset('/img/parqueo1.png') }}">
                         </div>
-                    </div>  
+                    </div>
                 </div>
-                <!-- FIN CRUD-->
             </div>
-        </div>
         <!-- /.content-wrapper -->
         </div>
+        
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <!-- Bootstrap 4 -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
         <!-- AdminLTE App -->
         <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
+        
     </body>
-
 <style>
-body {
-    color: #566787;
-    background-color:#D9D9D9;
-    font-family: 'Poppins', sans-serif;
-}
-h2{
-    font-family: 'Poppins', sans-serif;
-    color: #324855;
-}
-.content-wrapper{
-    background-color:#D9D9D9;
-    padding: 20px;
-}
-.table-responsive {
-    margin: 30px 0;
-}
-.table-wrapper {
-    min-width: 1000px;
-    background: #ffff;
-    padding: 40px;
-    box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    border-radius: 10px;
-}
-.table-title {
-    padding-bottom: 10px;
-    margin: 0 0 10px;
-    min-width: 100%;
-}
-.search-box {
-    position: relative;        
-    float: right;
-}
-.search-box input {
-    height: 34px;
-    border-radius: 20px;
-    padding-left: 35px;
-    border-color: #ddd;
-    box-shadow: none;
-}
-.search-box input:focus {
-    border-color: #3FBAE4;
-}
-.search-box i {
-    color: #a0a5b1;
-    position: absolute;
-    font-size: 19px;
-    top: 8px;
-    left: 10px;
-}
-table.table th i {
-    font-size: 13px;
-    margin: 0 5px;
-    cursor: pointer;
-}   
-img {
-    width: 20%;
-    height:auto;
-    margin-top: 2%;
-    margin-left: 81%;
-    margin-bottom: -1%;
-}
+    .container-xl{
+        width: auto;
+        background: #ffff;
+        padding: 40px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+        border-radius: 10px;
+        margin-top: 1%;
+    }
+    h2{
+        font-family: 'Poppins', sans-serif;
+        color: #324855;
+    }
+    .card{
+        margin-top: 5px;
+        border: 5px solid #53A790;
+        border-radius : 15px;
+        margin-bottom: 0%;
+    }
+    .card-header{
+        background-color:#53A790;
+        color: #ffffff;
+    }
+    img {
+        width: 20%;
+        height:auto;
+        margin-top: -4%;
+        margin-left: 81%;
+        margin-bottom: -1%;
+    }
+    input{
+        margin-top: -1%;
+    }
 </style>
 </html>
+
+
+<script>
+    $('#btn_guardar').click(function () {
+        var nombres = $('#nombres').val();
+        var apellidos = $('#apellidos').val();
+        var ci = $('#ci').val();
+        var correo = $('#correo').val();
+        var celular = $('#celular').val();
+
+        if(nombres == ""){
+            alert('Debe de llenar el campo de Nombres');
+            $('#nombres').focus();
+        }else if(apellidos == ""){
+            alert('Debe de llenar el campo de Apellidos');
+            $('#apellidos').focus();
+        }else if(ci == ""){
+            alert('Debe de llenar el campo de CI');
+            $('#ci').focus();
+        }else if(correo == ""){
+            alert('Debe de llenar el campo de Correo');
+            $('#correo').focus();
+        }else if(celular == ""){
+            alert('Debe de llenar el campo de Celular');
+            $('#celular').focus();
+        }
+    });
+</script>
