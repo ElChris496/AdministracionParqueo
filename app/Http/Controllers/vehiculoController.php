@@ -11,7 +11,7 @@ use \administracionparqueo;
 
 class vehiculoController extends Controller
 {
-    public function createLista(){
+        public function createLista(){
         $listav = Vehiculo::all(); 
         $idClientesv = $listav->pluck('id_cliente');
 
@@ -19,7 +19,6 @@ class vehiculoController extends Controller
         $ciClientes= $listaClientes->pluck('id','ci');
 
         $collection = collect([]);
-        
         foreach($listav as $listavehiculo){
             foreach($listaClientes as $listaCli){
                 if($listavehiculo->id_cliente == $listaCli->id){
@@ -28,11 +27,19 @@ class vehiculoController extends Controller
                 }
             }
         }
-        if($listaClientes){echo $collection;echo $listav;}
+        //if($listaClientes){echo $collection;echo $listav;}
         return view('administrador.vehiculos', compact('listav', 'collection'));
     }
     public function createAgregar(){
         return view('administrador.agregarVehiculo');
+    }
+    public function createBorrar($id){
+        $vehiculo = Vehiculo::find($id);
+
+        $clienteBorrar = Cliente::where('id', $vehiculo->id_cliente)->get();
+        $cicliente = $clienteBorrar->pluck('ci');
+
+        return view('administrador.borrarVehiculo', compact('vehiculo', 'cicliente'));
     }
     public function store(Request $request)
     {
@@ -50,6 +57,15 @@ class vehiculoController extends Controller
         }else{
             echo "Cliente No hay";
         }
+
+        $validation= $request->validate([
+
+            'marca' => 'required | min:3 | max: 30',
+            'modelo' => 'required | min:3 | max: 30',
+            'placa' => 'required | min:3 | max: 7',
+            'color' => 'required | min:3 | max: 30',
+        ]);
+
         $vehiculo=new vehiculo();
         $vehiculo->marca = $request->marca;
         $vehiculo->modelo = $request->modelo;
@@ -60,5 +76,10 @@ class vehiculoController extends Controller
         
         $vehiculo->save();
         return redirect('/administrador/agregarVehiculo');
+    }
+    public function delete($id){
+        $vehiculo = Vehiculo::destroy($id);
+        //return redirect('/administrador/clientes');
+        //return $Cliente;
     }
 }

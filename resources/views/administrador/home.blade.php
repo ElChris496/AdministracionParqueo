@@ -73,6 +73,29 @@
                             </ul>
                         </li>
 
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 5px;">
+                            <i class="nav-icon fas fa-car"></i>
+                            <p>Automoviles<i class="right fas fa-angle-left"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/administrador/vehiculos" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-car"></i>
+                                <p>Lista de automoviles</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/administrador/agregarVehiculo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-plus-circle"></i>
+                                <p>Agregar Automovil</p>
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 3px;">
                             <i class="nav-icon fab fa-product-hunt"></i>
@@ -80,15 +103,21 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="http://localhost/AdministracionParqueo/resources/views/administrador/parqueo/mapeoParqueo.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <a href="/administrador/mapeoParqueo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-map"></i>
                                 <p>Mapeo del parqueo</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <a href="/administrador/createAgregarIngreso" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-podcast"></i>
                                 <p>Asignar espacio</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-podcast"></i>
+                                <p>Agregar Sitio</p>
                                 </a>
                             </li>
                             </ul>
@@ -101,13 +130,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                            <a href="http://localhost/AdministracionParqueo/resources/views/administrador/horario/agregarHorario.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                            <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-plus-circle"></i>
                                 <p>Agregar Horario</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                            <a href="http://localhost/AdministracionParqueo/resources/views/administrador/horario/horarioEmergencia.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF; font-size:14px">
+                            <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF; font-size:14px">
                                 <i class="nav-icon far fa-clock"></i>
                                 <p>Horario de emergencia</p>
                                 </a>

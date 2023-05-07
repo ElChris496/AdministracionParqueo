@@ -73,6 +73,29 @@
                             </ul>
                         </li>
 
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 5px;">
+                            <i class="nav-icon fas fa-car"></i>
+                            <p>Automoviles<i class="right fas fa-angle-left"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/administrador/vehiculos" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-car"></i>
+                                <p>Lista de automoviles</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/administrador/agregarVehiculo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-plus-circle"></i>
+                                <p>Agregar Automovil</p>
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 3px;">
                             <i class="nav-icon fab fa-product-hunt"></i>
@@ -80,15 +103,21 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="http://localhost/AdministracionParqueo/resources/views/administrador/parqueo/mapeoParqueo.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <a href="/administrador/mapeoParqueo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-map"></i>
                                 <p>Mapeo del parqueo</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <a href="/administrador/createAgregarIngreso" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-podcast"></i>
                                 <p>Asignar espacio</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-podcast"></i>
+                                <p>Agregar Sitio</p>
                                 </a>
                             </li>
                             </ul>
@@ -101,13 +130,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                            <a href="http://localhost/AdministracionParqueo/resources/views/administrador/horario/agregarHorario.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                            <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-plus-circle"></i>
                                 <p>Agregar Horario</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                            <a href="http://localhost/AdministracionParqueo/resources/views/administrador/horario/horarioEmergencia.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF; font-size:14px">
+                            <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF; font-size:14px">
                                 <i class="nav-icon far fa-clock"></i>
                                 <p>Horario de emergencia</p>
                                 </a>
@@ -174,27 +203,39 @@
                                             <div class="form-group col-md-6">
                                                 <label for="">Marca*</label>
                                                 <input type="text" class="form-control" name="marca" placeholder="Ingrese la placa del vehiculo"></input>
+                                                @error('marca')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-4">
                                                 <label for="">Modelo*</label>
                                                 <input type="text" class="form-control" name="modelo" placeholder="Ingrese el modelo del vehiculo"></input>
+                                                @error('modelo')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                                @enderror
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="">Placa*</label>
                                                 <input type="text" class="form-control" name="placa" placeholder="Ingrese la marca del vehiculo"></input>
+                                                @error('placa')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                                @enderror
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="">Color*</label>
                                                 <input type="text" class="form-control" name="color" placeholder="Ingrese el color del vehiculo"></input>
+                                                @error('color')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                                @enderror
                                             </div>
                                         </div>
                                         <div class="form-group2">
                                             <button  type="submit" class="btn btn-primary" id="btn_guardar" style="background-color:#53A790; border-color:#53A790;">Guardar</button>
                                             <a href="/administrador/clientes" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
                                         </div>
-                                        <img src="{{ asset('/img/parqueo3.jpg') }}">
+                                        <img src="{{ asset('/img/parqueo8.png') }}">
                                         </div>
                                     </form>
                                 </div>
@@ -238,10 +279,10 @@
         color: #ffffff;
     }
     img {
-        width: 20%;
+        width: 35%;
         height:auto;
         margin-top: -4%;
-        margin-left: 81%;
+        margin-left: 67%;
         margin-bottom: -1%;
     }
     input{

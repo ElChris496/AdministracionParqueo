@@ -31,6 +31,15 @@ class clientesController extends Controller
     }
     public function store(Request $request)
     {
+        $validation= $request->validate([
+
+            'nombres' => 'required | min:3 | max: 30',
+            'apellidos' => 'required | min:3 | max: 30',
+            'ci' => 'required|numeric| digits_between:6,10 ',
+            'correo' => 'required |email',
+            'celular' => 'required |numeric| digits:8',
+        ]);
+
         $cliente=new Cliente();
         $cliente->nombres = $request->nombres;
         $cliente->apellidos = $request->apellidos;
@@ -43,6 +52,15 @@ class clientesController extends Controller
     }
     public function update(Request $request,$id)
     {
+        $validation= $request->validate([
+
+            'nombres' => 'required | min:3 | max: 30',
+            'apellidos' => 'required | min:3 | max: 30',
+            'ci' => 'required|numeric| digits_between:6,10 ',
+            'correo' => 'required |email',
+            'celular' => 'required |numeric| digits:8',
+        ]);
+
         $cliente = Cliente::findOrFail($request->id);
         $cliente->nombres = $request->nombres;
         $cliente->apellidos = $request->apellidos;

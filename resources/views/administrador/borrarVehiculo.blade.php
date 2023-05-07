@@ -182,7 +182,7 @@
             <div class="container-xl">
                 <div class="table-title">
                      <div class="row">
-                            <div class="col-sm-8"><h2><b>Eliminar Cliente</b></h2></div>
+                            <div class="col-sm-8"><h2><b>Eliminar Vehiculo</b></h2></div>
                      </div>
                 </div>
                 
@@ -194,33 +194,37 @@
                                 <div class="card-header">
                                     <h3 class="card-title">¿Esta seguro de eliminar este registro?</h3>
                                 </div>
-                            <form action="{{url ('/delete', $cliente->id)}}" method="POST" role="form">
+                            <form action="{{url ('/delete', $vehiculo->id)}}" method="POST" role="form">
                                     @csrf
                                     @method('delete')
                                 <div class="card-body">
-                                    <div class="form-group">
-                                        <label for="">Nombres</label>
-                                        <input type="text" class="form-control" id="nombres" name="nombres" value="{{$cliente->nombres}}" disabled>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="">CI Dueño*</label>
+                                        <input type="text" class="form-control" id="id_cliente" name="id_cliente" value="{{$cicliente->first()}}" disabled>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Apellidos</label>
-                                        <input type="text" class="form-control" id="apellidos" name="apellidos" value="{{$cliente->apellidos}}" disabled>
+                                    <div class="form-group col-md-6">
+                                        <label for="">Marca*</label>
+                                        <input type="text" class="form-control" id="marca" name="marca" value="{{$vehiculo->marca}}" disabled>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Ci</label>
-                                        <input type="text" class="form-control" id="ci" name="ci" value="{{$cliente->ci}}" disabled>
+                                </div>
+                                <div class="form-row">
+                                    <div class="fform-group col-md-4">
+                                        <label for="">Modelo*</label>
+                                        <input type="text" class="form-control" id="modelo" name="modelo" value="{{$vehiculo->modelo}}" disabled>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Correo</label>
-                                        <input type="email" class="form-control" id="correo" name="correo" value="{{$cliente->correo}}" disabled>
+                                    <div class="form-group col-md-4">
+                                        <label for="">Placa*</label>
+                                        <input type="email" class="form-control" id="placa" name="placa" value="{{$vehiculo->placa}}" disabled>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="">Celular</label>
-                                        <input type="text" class="form-control" id="celular" name="celular" value="{{$cliente->celular}}" disabled>
+                                    <div class="form-group col-md-4">
+                                        <label for="">Color*</label>
+                                        <input type="text" class="form-control" id="color" name="color" value="{{$vehiculo->color}}" disabled>
                                     </div>
+                                </div>
                                     <div class="form-group">
                                         <button class="btn btn-danger" id="btn_borrar" style="background-color:#53A790; border-color:#53A790;" >Borrar</button>
-                                        <a href="/administrador/clientes" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
+                                        <a href="/administrador/vehiculos" class="btn btn-default" style="background-color:#53A790;border-color:#53A790;color:#FFFFFF;">Cancelar</a>
                                     </div>
                                     <img src="{{ asset('/img/parqueo3.jpg') }}">
                                 </div>

@@ -73,6 +73,29 @@
                             </ul>
                         </li>
 
+                        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 5px;">
+                            <i class="nav-icon fas fa-car"></i>
+                            <p>Automoviles<i class="right fas fa-angle-left"></i></p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="/administrador/vehiculos" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-car"></i>
+                                <p>Lista de automoviles</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="/administrador/agregarVehiculo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-plus-circle"></i>
+                                <p>Agregar Automovil</p>
+                                </a>
+                            </li>
+                            </ul>
+                        </li>
+
+
                         <li class="nav-item">
                             <a href="#" class="nav-link active" style="background-color: #F9FA85; color:#324855; margin-top: 3px;">
                             <i class="nav-icon fab fa-product-hunt"></i>
@@ -80,15 +103,21 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="http://localhost/AdministracionParqueo/resources/views/administrador/parqueo/mapeoParqueo.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <a href="/administrador/mapeoParqueo" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-map"></i>
                                 <p>Mapeo del parqueo</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <a href="/administrador/createAgregarIngreso" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-podcast"></i>
                                 <p>Asignar espacio</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                                <i class="nav-icon fas fa-podcast"></i>
+                                <p>Agregar Sitio</p>
                                 </a>
                             </li>
                             </ul>
@@ -101,13 +130,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                             <li class="nav-item">
-                            <a href="http://localhost/AdministracionParqueo/resources/views/administrador/horario/agregarHorario.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
+                            <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF">
                                 <i class="nav-icon fas fa-plus-circle"></i>
                                 <p>Agregar Horario</p>
                                 </a>
                             </li>
                             <li class="nav-item">
-                            <a href="http://localhost/AdministracionParqueo/resources/views/administrador/horario/horarioEmergencia.php" class="nav-link active" style="background-color: #395261; color:#FFFFFF; font-size:14px">
+                            <a href="#" class="nav-link active" style="background-color: #395261; color:#FFFFFF; font-size:14px">
                                 <i class="nav-icon far fa-clock"></i>
                                 <p>Horario de emergencia</p>
                                 </a>
@@ -170,22 +199,37 @@
                                 <div class="form-group">
                                     <label for="">Nombres</label>
                                     <input type="text" class="form-control" id="nombres" name="nombres" value="{{$cliente->nombres}}">
+                                    @error('nombres')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="">Apellidos</label>
                                     <input type="text" class="form-control" id="apellidos" name="apellidos" value="{{$cliente->apellidos}}">
+                                    @error('apellidos')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="">Ci</label>
                                     <input type="text" class="form-control" id="ci" name="ci" value="{{$cliente->ci}}">
+                                    @error('ci')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="">Correo</label>
                                     <input type="email" class="form-control" id="correo" name="correo" value="{{$cliente->correo}}">
+                                    @error('correo')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <label for="">Celular</label>
                                     <input type="text" class="form-control" id="celular" name="celular" value="{{$cliente->celular}}">
+                                    @error('celular')
+                                                <p1 class="error-message">{{ $message }}</p1>
+                                    @enderror
                                 </div>
                                 <div class="form-group">
                                     <button class="btn btn-success" id="btn_editar" style="background-color:#53A790; border-color:#53A790;">Actualizar</button>
@@ -243,33 +287,8 @@
     input{
         margin-top: -1%;
     }
+    p1 {
+        color: red;
+    }
 </style>
 </html>
-
-
-<script>
-    $('#btn_editar').click(function () {
-        var nombres = $('#nombres').val();
-        var apellidos = $('#apellidos').val();
-        var ci = $('#ci').val();
-        var correo = $('#correo').val();
-        var celular = $('#celular').val();
-
-        if(nombres == ""){
-            alert('Debe de llenar el campo de Nombres');
-            $('#nombres').focus();
-        }else if(apellidos == ""){
-            alert('Debe de llenar el campo de Apellidos');
-            $('#apellidos').focus();
-        }else if(ci == ""){
-            alert('Debe de llenar el campo de CI');
-            $('#ci').focus();
-        }else if(correo == ""){
-            alert('Debe de llenar el campo de Correo');
-            $('#correo').focus();
-        }else if(celular == ""){
-            alert('Debe de llenar el campo de Celular');
-            $('#celular').focus();
-        }
-    });
-</script>
