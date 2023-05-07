@@ -15,7 +15,7 @@
                 <div class="container">
                     <div class="logo">
                     <img src="{{ asset('/img/logo.png') }}" alt="logo">
-                    <h3>Radiadores SSprintS</h3>
+                    <h3>Radiadores SSprintS55</h3>
                     </div>
                 <div class="links">
                     <ul>
