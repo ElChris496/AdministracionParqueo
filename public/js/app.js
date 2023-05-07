@@ -18,6 +18,10 @@ var flushing = false;
 var queue = [];
 var lastFlushedIndex = -1;
 
+app.listen(port, () => {
+  console.log(`App listening on port ${port}...`);
+});
+
 var port = process.env.PORT || 3000;
 
 // Listen on `port` and 0.0.0.0
